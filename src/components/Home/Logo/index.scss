@@ -1,0 +1,49 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(36000deg);
+  }
+}
+
+.logo-container {
+  z-index: 0;
+  width: 600px;
+  height: 809px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+}
+
+.logo-container svg {
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  transform: rotateZ(30deg) !important;
+}
+
+.solid-logo {
+  position: absolute;
+  top: 50px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.solid-logo:hover {
+  animation: rotate 100s linear both;
+}
+
+.svg-container {
+  stroke: #ffd700;
+  stroke-width: 10;
+}

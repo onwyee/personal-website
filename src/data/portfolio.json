@@ -1,0 +1,18 @@
+{
+    "portfolio": [
+        {
+            "cover": "/portfolio/1/one.png",
+            "title": "Frello (Knock off Trello)",
+            "description": "CSS, HTML, SocketIO, Javascript",
+            "url": "https://exam-wejkmadutq-uc.a.run.app/login"
+        },
+        {
+            "cover": "/portfolio/1/two.png",
+            "title": "Calculator",
+            "description": "CSS, HTML, Javascript, React",
+            "url": ""
+        }
+
+
+    ]
+}
