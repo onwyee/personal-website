@@ -1,51 +1,17 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoO from '../../../assets/images/logo-o.png'
-import './index.scss'
+import React from 'react';
+import LogoO from '../../../assets/images/logo-o.png'; // Adjust the path if needed
+import './index.scss';
 
 const Logo = () => {
-    const bgRef = useRef()
-    const outlineLogoRef = useRef()
-    const solidLogoRef = useRef()
-
-    useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
-
-        gsap
-            .timeline()
-            .to(bgRef.current, {
-                duration: 1,
-                opacity: 1,
-            })
-            .from(outlineLogoRef.current, {
-                drawSVG: 0,
-                duration: 20,
-            })
-
-        gsap.fromTo(
-            solidLogoRef.current,
-            {
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                delay: 4,
-                duration: 4,
-            }
-        )
-    }, [])
-
     return (
-        <div className="logo-container" ref={bgRef}>
+        <div className="logo-container">
             <img
                 className="solid-logo"
-                ref={solidLogoRef}
                 src={LogoO}
-                alt="JavaScript,  Developer"
+                alt="JavaScript, Developer"
             />
         </div>
-    )
-}
+    );
+};
 
-export default Logo
+export default Logo;
